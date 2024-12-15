@@ -299,39 +299,40 @@ class App extends Component{
     searchInput: ''
   }
 
-  // onChangeSearchInput = event => {
-  //   this.setState({searchInput: event.target.value})
-  // }
+  onChangeSearchInput = event => {
+    const {searchInput} = this.state;
+    this.setState({searchInput: event.target.value})
+  }
 
   clickTabItem = tabValue => {
     this.setState({activeTabId: tabValue})
   }
 
-  getFilteredApps = () => {
+  getFilteredApps = searchedApps => {
     const {activeTabId} = this.state;
-    const filteredApps = appsList.filter(eachApp => 
+    const filteredApps = searchedApps.filter(eachApp => 
       eachApp.category === activeTabId,
     )
     return filteredApps
   }
 
   getSearchResults = () => {
-    const{searchInput} = this.state
-    const SearchResults = appsList.filter(each => 
-      each.appName.toLowerCase().includes(searchInput.toLowerCase())
-    )
+    const {searchInput} = this.state
+    const SearchResults = appsList.filter(eachResult => 
+      eachResult.appName.toLowerCase().includes(searchInput.toLowerCase())
+    ) 
     return SearchResults
   }
 
   render(){
     const {activeTabId, searchInput} = this.state
-    //const SearchResults = this.getSearchResults()
-    const filteredApps = this.getFilteredApps()
+    const SearchResults = this.getSearchResults()
+    const filteredApps = this.getFilteredApps(SearchResults)
 
     return(
       <div className='app-container'>
         <h1>App Store</h1>
-        {/* <div className='input-container'>
+        <div className='input-container'>
           <input 
             onChange={this.onChangeSearchInput}
             type='search' 
@@ -339,7 +340,7 @@ class App extends Component{
             value={searchInput} 
           />
           <img src="https://assets.ccbp.in/frontend/react-js/app-store/app-store-search-img.png" alt="search icon" />
-        </div> */}
+        </div>
 
         <ul className='tabs-container'>
           {tabsList.map(tabDetails => (
@@ -364,3 +365,5 @@ class App extends Component{
 }
 
 export default App;
+
+

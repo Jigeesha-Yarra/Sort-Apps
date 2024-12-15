@@ -5,8 +5,8 @@
     justify-content: center;
     align-items: center;
     background-color: white;
-    width: 40%;
-    max-width: 198px;
+    width: 100%;
+    max-width: 216px;
     border-radius: 12px;
     padding-top: 24px;
     margin-left: 10px;
@@ -17,7 +17,7 @@
   p {
     color: #1e293b;
     font-family: 'Bree Serif';
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
   }
   
