@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sort-apps/static/css/main.5fcd21b3.css",
+    "main.js": "/sort-apps/static/js/main.804295e5.js",
+    "static/js/156.0edb397a.chunk.js": "/sort-apps/static/js/156.0edb397a.chunk.js",
+    "index.html": "/sort-apps/index.html",
+    "main.5fcd21b3.css.map": "/sort-apps/static/css/main.5fcd21b3.css.map",
+    "main.804295e5.js.map": "/sort-apps/static/js/main.804295e5.js.map",
+    "156.0edb397a.chunk.js.map": "/sort-apps/static/js/156.0edb397a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5fcd21b3.css",
+    "static/js/main.804295e5.js"
+  ]
+}
